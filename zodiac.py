@@ -13,7 +13,7 @@ def get_zodiac_part_dict():
 
     result_dict = {}
     with path.open(encoding='utf-8') as f:
-        reader = csv.DictReader(f)
+        reader: csv.DictReader = csv.DictReader(f)
         for row in reader:
             result_dict[row['星座名']] = {"month": int(row['月']), "day": int(row['日'])}
     return result_dict
