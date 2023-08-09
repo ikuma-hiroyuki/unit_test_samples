@@ -34,3 +34,25 @@ def test_get_last_month_not_int():
     """異常系でint型でない場合"""
     with pytest.raises(TypeError):
         get_last_month('1')
+
+
+def test_get_last_month_concised_normal():
+    """正常系で1月でない場合"""
+    assert get_last_month_concised(2) == 1
+
+
+def test_get_last_month_concised_12():
+    """正常系で1月の場合"""
+    assert get_last_month_concised(1) == 12
+
+
+def test_get_last_month_concised_over_12():
+    """異常系で12より大きい場合"""
+    with pytest.raises(ValueError):
+        get_last_month_concised(13)
+
+
+def test_get_last_month_concised_under_1():
+    """異常系で1より小さい場合"""
+    with pytest.raises(ValueError):
+        get_last_month_concised(0)
