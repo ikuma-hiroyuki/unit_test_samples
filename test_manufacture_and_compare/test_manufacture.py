@@ -1,5 +1,12 @@
-from manufacture import create_handle, create_seat, create_frame, create_bumper, semifinished_product_interior, \
-    semifinished_product_exterior, create_car
+from manufacture import (
+    create_handle,
+    create_seat,
+    create_frame,
+    create_bumper,
+    semifinished_product_interior,
+    semifinished_product_exterior,
+    create_car
+)
 
 
 def test_create_handle_handle_type_normal():
